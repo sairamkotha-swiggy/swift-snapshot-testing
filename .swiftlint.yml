@@ -1,0 +1,51 @@
+# https://github.com/realm/SwiftLint
+# rules : https://github.com/realm/SwiftLint/blob/master/Rules.md
+
+disabled_rules:
+ - identifier_name
+ - line_length
+ - type_body_length
+ - file_length
+ - type_name
+ - trailing_whitespace
+ - no_fallthrough_only
+ - conditional_returns_on_newline
+ - object_literal
+
+opt_in_rules:
+ - empty_count #performance
+ - empty_string #performance
+ - first_where #performance
+ - sorted_first_last #performance
+ - contains_over_first_not_nil #performance
+ - private_outlet
+ - private_action
+ - redundant_nil_coalescing
+ - strict_fileprivate
+ - switch_case_on_newline
+ - closure_end_indentation
+ - modifier_order
+ - multiline_arguments
+ - no_extension_access_modifier
+
+excluded: # paths to ignore during linting.Takes precedence over `included`.
+ - Pods
+ - swiggyTests
+
+force_try: warning
+force_cast: warning
+empty_count: warning
+shorthand_operator: warning
+no_extension_access_modifier: warning
+cyclomatic_complexity:
+- 10 # warning
+- 65 # error
+large_tuple:
+- 3 # warning
+- 7 # error
+function_body_length:
+- 50
+- 350
+function_parameter_count:
+- 5
+- 30
